@@ -1,59 +1,102 @@
-# BookListAngular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
+# 📚 BookList – Minha Biblioteca
 
-## Development server
+Uma aplicação web simples, responsiva e acessível para gerenciamento de livros. Desenvolvido com Angular standalone, Bootstrap 5 e boas práticas de UX/UI, o projeto permite cadastrar, listar e remover livros com armazenamento local (localStorage).
 
-To start a local development server, run:
+---
+
+## ✨ Funcionalidades
+
+- ✅ Cadastro de livros com título, autor e ISBN
+- 📄 Listagem dos livros com visual limpo e responsivo
+- ❌ Remoção de livros com botão de ação clara
+- 💾 Persistência local via `localStorage`
+- 🔔 Alertas visuais com feedback em tempo real
+- 🧑‍🦯 Acessível para leitores de tela (uso de ARIA)
+- 📱 Layout mobile-first com Bootstrap 5
+- 🧩 Estrutura moderna usando Angular standalone + signals
+
+---
+
+## 🎨 Interface
+
+![screenshot](https://raw.githubusercontent.com/Sheliga/images/refs/heads/master/projects/book-list-angular/MinhaBiblioteca.jpg)
+
+- Ícone no cabeçalho: `fa-book` da Font Awesome
+- Título claro: **Minha Biblioteca**
+- Formulário com labels e placeholders amigáveis
+- Validação de campos obrigatórios
+- Tabela com ícones de ação e suporte a teclado/leitores
+
+---
+
+## 🛠️ Tecnologias
+
+- [Angular 20+ (standalone + zoneless)](https://angular.dev/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [Font Awesome 6](https://fontawesome.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+src/
+├── app/
+│   ├── book.model.ts         # Interface do livro
+│   ├── book.service.ts       # Serviço de persistência local
+│   ├── book-list/
+│   │   ├── book-list.ts
+│   │   ├── book-list.html
+│   │   └── book-list.css
+│   ├── app.ts                # Componente raiz standalone
+│   ├── app.html
+│   └── app.css
+```
+
+---
+
+## 🚀 Como Rodar o Projeto
 
 ```bash
+# Instale as dependências
+npm install
+
+# Rode a aplicação
 ng serve
+
+# Acesse no navegador
+http://localhost:4200
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 💡 Melhorias Futuras
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- [ ] Edição de livros existentes
+- [ ] Filtro de busca por título ou autor
+- [ ] Integração com API externa para salvar livros
+- [ ] Exportação da lista em CSV ou PDF
+- [ ] Autenticação de usuário
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🧠 Conceitos aplicados
 
-```bash
-ng generate --help
-```
+- Mobile-first design
+- Acessibilidade com `aria-*` e `visually-hidden`
+- Separação de responsabilidades (componentes + serviços)
+- UX com feedback imediato e sem page reload
+- Clean Code & boas práticas Angular (sem `NgModules`)
 
-## Building
+---
 
-To build the project run:
+## 📜 Licença
 
-```bash
-ng build
-```
+Projeto livre para fins de estudo e portfólio.  
+MIT License © Paulo Sheliga
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> Desenvolvido por Paulo Sheliga
